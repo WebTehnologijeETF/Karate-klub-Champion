@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  outline: 0;
+}
+
+/*      POZADINA OKVIRA     */
+#testbody{
+    margin: 0 auto;
+    background: #260000;
+/*    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #343333 80%);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #343333 80%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #343333 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #343333));
+*/}
+/*__________________________*/
+
+.testdiv{
+    background-color: #330000;
+    color: #F2E6E6;
+    position:absolute;
+    width:1024px;
+    min-height: 100%;
+    z-index:15;
+    left:50%;
+    margin:0px 0 0 -512px;
+    padding-bottom: 200px;
+}
+
+/*      POZADINA PAGE-a     */
+#testdiv{
+    background-color: #330000;
+    color: #F2E6E6;
+    position:absolute;
+    width:1024px;
+    min-height: 100%;
+    z-index:15;
+    left:50%;
+    margin:0px 0 0 -512px;
+}
+
+/*__________________________*/
+
+/*                  NASLOV SAJTA                    */
+h1 { 
+    background-color: #F9F2F2;
+    speak: none;
+    font-style: normal;
+    font-weight: 700;
+    font-variant: normal;
+    text-transform: none;
+    color: #330000; 
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-size: 64px; 
+    line-height: 64px; 
+    margin: 0 0 0; 
+    padding: 20px 30px; 
+    text-align: center; 
+}
+/*_________________________________________________*/
+
+/*  LOGO KLUBA    */
+img{
+    margin-top: 5px;
+    width:120px;
+    height:116px;
+    padding-left: 5px;
+    float: left;
+}
+/*________________*/
+
+/*  HIPERLINKOVI NA EKSTERNE STRANICE   */
+#twitter, #youtube, #instagram, #facebook{
+    width:30px;
+    height: 30px;
+    float: right;
+    position: relative;
+    bottom: 20px;
+}
+
+#google{
+    width:30px;
+    height: 30px;
+    float: right;
+    position: relative;
+    margin-right: 20px;
+    bottom: 20px;
+}
+
+/*_____________________________________*/
+
+/*                      IZBORNI MENI I PODMENIJI (konfuzija>9000)                    */
+
+#meni{
+    position: relative;
+    speak: none;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 20px;
+    color: #200000;
+    background-color: #F2E222;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    letter-spacing:0.08em;
+    text-align:center;
+    line-height: 110%;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.menu {
+    speak: none;
+    font-variant: normal;
+    width:1024px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+ 
+.menu li {
+    padding-left: 2px;
+    padding-right: 2px;
+    speak: none;
+    font-variant: normal;
+    color: #330000;
+    list-style:none;
+}
+ 
+.menu a {
+    text-decoration:none;
+    color:#919191;
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+    
+    text-decoration:none;
+    background-color: #130000;
+    color: #F2E6E6;
+}
+ 
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+ 
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:12px;
+}
+ 
+.menu > ul > li > a {
+    background:#F2E6E6;
+    padding:10px 35px;
+    display:inline-block;
+    color: #330000;
+}
+
+/*prikazi submeni*/
+.menu li:hover .sub-menu {    
+    z-index:1;
+    opacity:10;
+}
+
+.sub-menu {
+    width:125%;
+    padding:0px 6px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    background:#200000;
+}
+ 
+.sub-menu li a {
+    
+    font-size: 11px;
+    padding:10px 10px;
+    display:block;
+    color: #F2E6E6;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    
+    background:#F2E6E6;
+    color: #330000;
+}
+/*____________________________________________________________________________________*/
+
+/*              KONTAKT             */
+#kontakt, #forma{
+    position: relative;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    width: 1000px;
+}
+
+#forma2{
+    position: relative;
+    margin-top: 100px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#kontakt{
+    width: 800px;
+    margin-left: 400px;
+    background:url('../slike/watermark1.png') center center no-repeat;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #0D0000;
+    background-color: #F2E6E6;
+    font-family: Trebuchet MS;
+    letter-spacing:0.1em;
+    text-align:center;
+    line-height: 145%;
+    margin: 40px auto;
+}
+
+div .link{
+    text-decoration: none;
+    color: white;
+}
+
+
+#linklista li{
+    text-decoration: none;
+    list-style-image: url('../slike/bulletlogo.png');
+    color: white;
+}
+/*__________________________________*/
+
+/*          NOVOSTI                 */
+
+.intro {
+    background:url('../slike/watermark1.png') center right no-repeat;
+    position: relative;
+    width: 90%;
+    line-height: 15px;
+    display: block;
+    margin: 8px 0px 0px;
+    height: 200px;
+    width: 800px;
+    background-color: #F2E6E6;
+    color: #0D0000;
+    text-align: justify;
+    left: 50%;
+    padding-right: 5px;
+    margin-left: -400px;
+    speak: none;
+    font-size: 10px;
+    font-family: Trebuchet MS;
+}
+
+.naslovi{
+    padding: 5px;
+}
+
+div .detaljnije{
+    text-decoration: none;
+    color: #800000;
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+div .datum, div .autor{
+    text-decoration: none;
+    color: #800000;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#contact{
+    color: #F2E6E6;
+    text-decoration: none;
+    border-style: hidden;
+    border-left: dashed;
+    border-right: dashed;
+    border-width: 2pt;
+    padding-left:0.3cm;
+    padding-right:0.3cm;
+    border-color: #F2E6E6;
+    position: relative;
+    float: right;
+    font-size: 14px;
+    right: 20px;
+    font-family: Trebuchet MS;
+}
+
+.novostslika{
+    width: 344px;
+    height: 155px;
+    margin-top: -5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border:solid 1px #0D0000;
+}
+
+#tekstnovosti:first-letter{
+    font-family: "MuseoSans_Thin";
+    text-transform: uppercase;
+}
+
+#tekstnovosti{  
+    width: 800px; 
+    bottom: 100px;
+    top: 50px;
+    left: 50%;
+    margin-left: -405px;
+    position: relative;
+    background:url('../slike/watermark1.png') center center no-repeat;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #0D0000;
+    background-color: #F2E6E6;
+    font-family: Trebuchet MS;
+    letter-spacing:0.1em;
+    text-align:justify;
+    line-height: 125%;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#tekstovi{
+
+}
+/*__________________________________*/
+
+/*          RASPORED                */
+#raspored{
+    position: relative;
+    border-spacing: 3px;
+    border-collapse: separate;
+    background-color: #330000;
+    color: #F2E6E6;
+    text-align: center;
+    width: 950px;
+    margin-left: 37px;
+}
+td{
+    padding: 9px;    
+    width: 100px;
+    font-size: 12px;
+    background-color: #200000;
+}
+.satnica{
+    background-color: #1A0000;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    letter-spacing:0.1em;
+    text-align:center;
+    font-size: 13px;
+}
+
+#clanovi{
+    margin-top: 76px;
+    position: relative;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;   
+    background-color: #330000;
+    font-family: "MuseoSans_Thin";
+    color: #F2E6E6;
+    font-size: 16px;
+}
+
+/*__________________________________*/
+
+/*              PODNOZJE            */
+#footer {
+    background-color: #343333;
+    clear: both;
+    width: 100%;
+}
+
+#footer {
+    height:170px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+#futer1{
+    padding-top: 10px;
+    background-color: #343333;
+    margin: 0 auto;
+    width: 700px;
+    margin-left: 150px;
+    height: 90px;
+}
+
+#futer2{
+    padding-top: 10px;
+    background-color: #343333;
+    margin: 0 auto;
+    margin-left: 150px;
+    width: 700px;
+    height: 60px;
+}
+/*__________________________________*/
+
