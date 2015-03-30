@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
 
 * {
   margin: 0;
@@ -217,7 +218,7 @@ img{
     text-transform: none;
     color: #0D0000;
     background-color: #F2E6E6;
-    font-family: Trebuchet MS;
+    font-family: 'Cabin';
     letter-spacing:0.1em;
     text-align:center;
     line-height: 145%;
@@ -256,7 +257,8 @@ div .link{
     margin-left: -400px;
     speak: none;
     font-size: 10px;
-    font-family: Trebuchet MS;
+    font-family: 'Cabin';
+
 }
 
 .naslovi{
@@ -293,7 +295,7 @@ div .datum, div .autor{
     float: right;
     font-size: 14px;
     right: 20px;
-    font-family: Trebuchet MS;
+    font-family: 'Cabin';
 }
 
 .novostslika{
@@ -326,7 +328,7 @@ div .datum, div .autor{
     text-transform: none;
     color: #0D0000;
     background-color: #F2E6E6;
-    font-family: Trebuchet MS;
+    font-family: 'Cabin';
     letter-spacing:0.1em;
     text-align:justify;
     line-height: 125%;
