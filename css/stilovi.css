@@ -10,11 +10,7 @@
 #testbody{
     margin: 0 auto;
     background: #260000;
-/*    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #343333 80%);
-    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #343333 80%);
-    background-image: linear-gradient(to bottom, #FFFFFF 0%, #343333 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #343333));
-*/}
+}
 /*__________________________*/
 
 .testdiv{
@@ -92,101 +88,89 @@ img{
 /*_____________________________________*/
 
 /*                      IZBORNI MENI I PODMENIJI (konfuzija>9000)                    */
+#pocetna{
+    padding-right: 25px;
+    margin-top: -4px;
+    width: 24px;
+    height: 24px;
+    float: right;
+}
 
 #meni{
+    margin-left: 3%;
     position: relative;
-    speak: none;
     font-style: normal;
     text-transform: none;
     margin-top: 20px;
-    color: #200000;
-    background-color: #F2E222;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
     letter-spacing:0.08em;
-    text-align:center;
-    line-height: 110%;
+    line-height: 160%;
     font-variant: small-caps;
     font-weight: bold;
+    text-align: center;
 }
 
 .menu {
-    speak: none;
-    font-variant: normal;
-    width:1024px;
-    margin-left: auto;
-    margin-right: auto;
+    width:950px;
     position: relative;
 }
- 
+
 .menu li {
-    padding-left: 2px;
-    padding-right: 2px;
-    speak: none;
     font-variant: normal;
-    color: #330000;
     list-style:none;
 }
  
 .menu a {
+    border-bottom:3px #CC0000 solid;
+    border-radius: 2px;
+    padding: 3px;
     text-decoration:none;
     color:#919191;
 }
  
-.menu li:hover > a, .menu .current-item > a {
-    
+.menu li:hover > a, .menu .current-item > a {    
     text-decoration:none;
-    background-color: #130000;
+    background-color: #999999;
     color: #F2E6E6;
 }
  
-.menu .arrow {
-    font-size:11px;
-    line-height:0%;
-}
- 
 .menu > ul > li {
-    float:left;
     display:inline-block;
     position:relative;
-    font-size:12px;
+    font-size:18px;
 }
  
 .menu > ul > li > a {
     background:#F2E6E6;
-    padding:10px 35px;
     display:inline-block;
     color: #330000;
+    width:170px;
 }
 
-/*prikazi submeni*/
-.menu li:hover .sub-menu {    
+.menu li .sub-menu {
     z-index:1;
-    opacity:10;
 }
 
 .sub-menu {
-    width:125%;
-    padding:0px 6px;
+    width:102%;
+    padding:0px 0px;
     position:absolute;
     top:100%;
-    left:0px;
     z-index:-1;
-    opacity:0;
-    background:#200000;
+    background: #808080;
 }
  
 .sub-menu li a {
-    
+    color: #F2E6E6;    
     font-size: 11px;
     padding:10px 10px;
     display:block;
-    color: #F2E6E6;
 }
  
 .sub-menu li a:hover, .sub-menu .current-item a {
     
-    background:#F2E6E6;
-    color: #330000;
+    background:#B2B2B2;
+    color: #F2E6E6;
 }
 /*____________________________________________________________________________________*/
 
@@ -340,6 +324,43 @@ div .datum, div .autor{
 #tekstovi{
 
 }
+/*__________________________________*/
+
+
+
+/*          VALIDACIJA              */
+
+#forma strong {
+    margin-left: 3cm;
+}
+
+.input{
+    margin-left: 3cm;
+}
+
+#string1{
+    background-color: #856666;
+    border-color: #5C3333;
+}
+
+#greska{
+    margin-left: 3cm;
+}
+
+ .greskai{
+    margin-left: 3cm;
+    background-color: #330000;
+/*    background:url('../slike/greska.png') center center no-repeat;
+ */   padding-bottom: 3px;
+    margin-top: -2px;
+ }
+
+ .greskaj{
+    position: relative;
+    background-color: #330000;
+    border-color: #330000;
+ }
+
 /*__________________________________*/
 
 /*          RASPORED                */
