@@ -1,0 +1,80 @@
+<a href="#"><img src="slike/lista.png" alt="lista" id="lista" onclick="Izlistaj();"></a>
+<img src="slike/arrow.png" alt="lista" id="lista"> &nbsp;&nbsp;Izlistaj proizvode
+<br>
+<br>
+<div id="izlistavanje">
+    
+</div>
+<br><br>
+<div id="izmjena"></div>
+
+<table id="kontrole">
+    <tr>
+        <td>
+            <p>ID</p>
+        </td>
+        <td>
+            <input class="input" type="number" min="0" id="id" value="0">
+        </td>
+        <td>
+            <div id="greska6" class="greskai"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Student</p>
+        </td>
+        <td>
+            <input class="input" type="number" id="student" min="16386" max="16386" value="16386">
+        </td>
+        <td>
+            <div id="greska7" class="greskai"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Naziv proizvoda</p>
+        </td>
+        <td>
+            <input class="input" type="text" id="naziv">
+        </td>
+        <td>
+            <div id="greska8" class="greskai"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Opis proizvoda</p>
+        </td>
+        <td>
+            <input class="input" type="text"id="opis">
+        </td>
+        <td>
+            <div id="greska9" class="greskai"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Slika</p>
+        </td>
+        <td>
+            <input class="input" type="text" id="slika">
+        </td>
+        <td>
+            <div id="greska10" class="greskai"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Dostupnost</p>
+        </td>
+        <td>
+            <input class="input" type="number" min="0" max="1" id="dostupnost" value="0">
+        </td>
+        <td>
+            <div id="greska15" class="greskai"></div>
+        </td>
+    </tr>
+</table>
+<br>
+<input type="button" id="salji" onclick="pozivAkcije();" value="Pošalji">

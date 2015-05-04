@@ -88,12 +88,33 @@ img{
 /*_____________________________________*/
 
 /*                      IZBORNI MENI I PODMENIJI (konfuzija>9000)                    */
-#pocetna{
+#pocetna, #korpa, #contact{
     padding-right: 25px;
     margin-top: -4px;
     width: 24px;
     height: 24px;
     float: right;
+}
+
+#lista{
+    margin-top: -10px;   
+    width: 24px;
+    height: 24px;
+}
+
+#listaj{
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+#akcija, #salji{
+    margin-left: 16px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 25px;
+}
+#salji{
+    margin-left: 120px;
 }
 
 #meni{
@@ -264,7 +285,7 @@ div .datum, div .autor{
     padding-top: 10px;
     padding-left: 10px;
 }
-
+/* CONTACT VISE NIJE TEKST
 #contact{
     color: #F2E6E6;
     text-decoration: none;
@@ -280,7 +301,7 @@ div .datum, div .autor{
     font-size: 14px;
     right: 20px;
     font-family: 'Cabin';
-}
+}*/
 
 .novostslika{
     width: 344px;
@@ -361,10 +382,16 @@ div .datum, div .autor{
     border-color: #330000;
  }
 
+ #uslov{
+    margin-left: 3cm;
+    padding-bottom: 3px;
+    margin-top: -2px;   
+ }
+
 /*__________________________________*/
 
 /*          RASPORED                */
-#raspored{
+#raspored, #kontrole, #tabela{
     position: relative;
     border-spacing: 3px;
     border-collapse: separate;
