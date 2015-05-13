@@ -212,7 +212,7 @@ img{
     font-size: 14px;
 }
 
-#kontakt{
+#kontakt, #provjeraUnosa{
     width: 800px;
     margin-left: 400px;
     background:url('../slike/watermark1.png') center center no-repeat;
@@ -228,6 +228,10 @@ img{
     text-align:center;
     line-height: 145%;
     margin: 40px auto;
+}
+
+#provjeraUnosa{
+    text-align: left;
 }
 
 div .link{

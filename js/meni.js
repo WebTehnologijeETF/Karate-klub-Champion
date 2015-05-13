@@ -9,8 +9,7 @@ window.onload = function ponisti(){
    	submenu2.style.visibility = 'hidden';
 	submenu3.style.visibility = 'hidden';	
 	submenu4.style.visibility = 'hidden';
-
-	randomString();
+    randomString();
 }
 
 function Otvori(podmeni){
@@ -104,7 +103,7 @@ function validacijaKontaktForme() {
     }
 //
 //
-/*//VALIDACIJA E-MAILA NEPOTPUNA, TRENUTNO OPCIONALNO
+//VALIDACIJA E-MAILA NEPOTPUNA, TRENUTNO OPCIONALNO
     if (forma.mail.value.length > 30 || forma.mail.value.length < 6){
         div1.innerHTML = "";
         div2.innerHTML = "";
@@ -114,7 +113,7 @@ function validacijaKontaktForme() {
         greska.innerHTML+="DUZINA E-MAIL ADRESE NIJE ADEKVATNA";
         div2.appendChild(slika);
         return false;
-    }*/
+    }
 //
 //
     var telefonRegEx = /^\(?(\d{3})\)?[-]?(\d{3})[-]?(\d{3})$/;
@@ -182,7 +181,10 @@ function poziv(page){
     }
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4 && ajax.status == 200)
+        {
             document.getElementById("promijeni").innerHTML = ajax.responseText;
+            document.getElementById("forma").style.display = "none";
+        }
         if (ajax.readyState == 4 && ajax.status == 404)
             document.getElementById("promijeni").innerHTML = "Greska: nepoznat URL";
     }
