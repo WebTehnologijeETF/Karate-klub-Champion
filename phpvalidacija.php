@@ -78,5 +78,5 @@
 			$formaV ="belaj.php";
 		}
 	}
-	include "mailMe.php";
+//	include "mailMe.php";
 ?>
