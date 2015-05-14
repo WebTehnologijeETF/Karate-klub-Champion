@@ -11,7 +11,7 @@
         <div id="testdiv" class="testdiv">
                 <br>
                 <div>
-                    <a href="#"><img src="slike/home.png" alt="pocetna" id = "pocetna" onclick="poziv('prva.html')"></a>
+                    <a href="#"><img src="slike/home.png" alt="pocetna" id = "pocetna" onclick="poziv('novosti.php')"></a>
                     <a href="kontaktstranica.php"><img src="slike/contact.png" alt="contact" id = "contact"></a>
                     <a href="#"><img src="slike/korpa.png" alt="proizvodi" id="korpa" onclick="poziv('studenti.html')"></a>
                 </div>
