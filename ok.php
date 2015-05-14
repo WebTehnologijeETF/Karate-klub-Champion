@@ -12,8 +12,8 @@
 	<br>
 	<h4>Da li ste sigurni da želite poslati ove podatke?</h4>
 	<br>
-	<form class="forma" method="POST" action="mailMe.php">
-		<input class="input" id="dugme" type="submit" value="Siguran sam">
+	<form class="forma" method="POST" action="kontaktstranica.php">
+		<input class="input" id="dugme" type="submit" value="Siguran sam" onclick="poziv('mailMe.php')">
 	</form>
 	<br><br>
 	<form method="POST" action="kontaktstranica.php" id="kforma">
@@ -44,4 +44,5 @@
 		<br><br>
 		<input class="input" id="dugme" type="submit" value="Posalji"> <!--onclick="return validacijaKontaktForme()"> -->
 	</form>
+	<?php include "mailMe.php"?>
 </div>
