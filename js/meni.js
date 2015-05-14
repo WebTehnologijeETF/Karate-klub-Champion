@@ -188,7 +188,7 @@ function poziv(page){
         if (ajax.readyState == 4 && ajax.status == 404)
             document.getElementById("promijeni").innerHTML = "Greska: nepoznat URL";
     }
-    ajax.open("POST", page, true);
+    ajax.open("GET", page, true);
     ajax.send();
 }
 
@@ -432,4 +432,37 @@ function Izlistaj(){
     ajax.open("GET", url, true);
     ajax.send();
     return false;
+}
+
+
+//              UCITAJ DETALJNIJE
+function UcitajDetaljnije(datum, autor, naslov, slika, opis, detaljnije)
+{
+    var ajax;
+    if (window.XMLHttpRequest)
+    {
+        ajax = new XMLHttpRequest(); // FIREFOX
+    }
+    else if (window.ActiveXObject)
+    {
+        ajax = new ActiveXObject(); // IE
+    }
+    ajax.onreadystatechange = function()
+    {
+        if(ajax.readyState == 4 && ajax.status == 200)
+        {
+           document.getElementById("promijeni").innerHTML = ajax.responseText;
+        }
+        if (ajax.readyState == 4 && ajax.status == 404)
+        {
+           alert("Ne postoji stranica!");
+        }
+        if (ajax.readyState == 4 && ajax.status == 400)
+        {
+           alert("Neispravni podaci!");
+        }
+    }
+    var url= "detaljnije.php?"+"datum="+datum+"&autor="+autor+"&naslov="+naslov+"&slika="+slika+"&opis="+opis+"&detaljnije="+detaljnije;
+    ajax.open("GET", url, true);
+    ajax.send();
 }

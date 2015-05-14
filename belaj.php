@@ -32,7 +32,7 @@
 		<br><br>
 			<div id="greska"><?php print $poruka?></div>
 		<div class="greskaj"><strong>Tekst poruke:</strong></div>
-		<textarea class="input" id="area" name="area" rows ="10" cols="51" ><?php if (isset($_REQUEST['area'])) {print htmlspecialchars($_REQUEST['tekst']);} ?></textarea>
+		<textarea class="input" id="area" name="area" rows ="10" cols="51" ><?php if (isset($_REQUEST['area'])) {print htmlspecialchars($_REQUEST['area']);} ?></textarea>
 		<br><br>
 		<input class="input" id="dugme" type="submit" value="Posalji"> <!--onclick="return validacijaKontaktForme()"> -->
 	</form>
