@@ -1,7 +1,7 @@
 <?php
-	if(isset($_REQUEST['naziv']))
+	if(!isset($_REQUEST['area']))
 	{
-		$tekst = htmlspecialchars($_REQUEST['area']);
+		$_REQUEST['area'] = "";
 	}
 	if (!isset($_REQUEST['naziv']))
 	{
@@ -19,15 +19,19 @@
 	{
 		$_REQUEST['predmet'] = "";
 	}
-		if(isset($_REQUEST['area']) && isset($_REQUEST['naziv']) && isset($_REQUEST['predmet']) && isset($_REQUEST['telefon']))
+	if(isset($_REQUEST['area']) && isset($_REQUEST['naziv']) && isset($_REQUEST['predmet']) && isset($_REQUEST['telefon']))
 	{
 		$naziv = htmlspecialchars($_REQUEST['naziv']);
 		$telefon = htmlspecialchars($_REQUEST['telefon']);
 		$predmet = htmlspecialchars($_REQUEST['predmet']);
 		$poruka =  htmlspecialchars($_REQUEST['area']);
 		$url = 'https://api.sendgrid.com/';
-		$user = 'DM12KPNLIq';
-		$pass = 'adsRvqPZra';
+		//
+		//password Jr1PKCirj1
+		//username Iukjpg6CY0
+		//
+		$user = 'Iukjpg6CY0';
+		$pass = 'Jr1PKCirj1';
 		$request =  $url.'api/mail.send.json';
 		$session = curl_init($request);
 		if (isset($_REQUEST['mail']))
@@ -63,7 +67,7 @@
 
 		$response = curl_exec($session);
 		curl_close($session);
-		print_r($response);
+//		print_r($response);
 		echo "Hvala Vam što ste nas kontaktirali!";
 	}
 ?>
