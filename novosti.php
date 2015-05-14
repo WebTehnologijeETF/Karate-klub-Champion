@@ -38,14 +38,13 @@
 				<a href="#" class="autor">'.$autor.'</a>';
 		if ($detaljnije != "")
 		{
-			$datum = "'".str_replace( "\r\n", '<br>', $datum )."'";
-			$autor ="'".str_replace( "\r\n", '<br>', $autor )."'";
-			$naslov ="'".str_replace( "\r\n", '<br>', $naslov )."'";
-			$slika ="'".str_replace( "\r\n", '<br>', $slika )."'";
-			$opis ="'".str_replace( "\r\n", '<br>', $opis )."'";
-			$detaljnije ="'".str_replace( "\r\n", '<br />', $detaljnije )."'";
-			$link = '<a href="#" class="detaljnije" onClick="UcitajDetaljnije('
-				.$datum.','.$autor.','.$naslov.','.$slika.','.$opis.','.$detaljnije.')">Detaljnije...</a>';
+			$datum = "'".trim(preg_replace('/\s+/', ' ',$datum))."'";
+			$autor = "'".trim(preg_replace('/\s+/', ' ',$autor))."'";
+			$naslov = "'".trim(preg_replace('/\s+/', ' ',$naslov))."'";
+			$slika = "'".trim(preg_replace('/\s+/', ' ',$slika))."'";
+			$opis = "'".trim(preg_replace('/\s+/', ' ',$opis))."'";
+			$detaljnije = "'".trim(preg_replace('/\s+/', ' ',$detaljnije))."'";
+			$link = '<a href="#" class="detaljnije" onClick="UcitajDetaljnije('.$datum.','.$autor.','.$naslov.','.$slika.','.$opis.','.$detaljnije.')">Detaljnije...</a>';
 		}
 		$novostiDiv = $novostiDiv.'<br>'.$link.'</div>';
 	   	echo $novostiDiv;
