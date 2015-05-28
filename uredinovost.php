@@ -107,23 +107,23 @@
         $detaljU = htmlspecialchars($_REQUEST['detaljnije']);
         if ($autorU != "")
         {
-        	$upis = $veza->query("UPDATE novost set autor = '{$autorU}' where id = {$id}");
+        	$upis = $veza->query("UPDATE novost set autor = '{$autorU}' where id = {$id} LIMIT 0, 1");
         }
         if ($tekstU != "")
         {
-        	$upis = $veza->query("UPDATE novost set opis = '{$tekstU}' where id = {$id}");
+        	$upis = $veza->query("UPDATE novost set opis = '{$tekstU}' where id = {$id} LIMIT 0, 1");
         }
         if ($slikaU != "")
         {
-        	$upis = $veza->query("UPDATE novost set slika = '{$slikaU}' where id = {$id}");
+        	$upis = $veza->query("UPDATE novost set slika = '{$slikaU}' where id = {$id} LIMIT 0, 1");
         }
         if ($mailU != "")
         {
-        	$upis = $veza->query("UPDATE novost set naslov = '{$mailU}' where id = {$id}");
+        	$upis = $veza->query("UPDATE novost set naslov = '{$mailU}' where id = {$id} LIMIT 0, 1");
         }
         if ($detaljU != "")
         {
-        	$upis = $veza->query("UPDATE novost set autor = '{$detaljU}' where id = {$id}");
+        	$upis = $veza->query("UPDATE novost set autor = '{$detaljU}' where id = {$id} LIMIT 0, 1");
         }
     }
 ?>

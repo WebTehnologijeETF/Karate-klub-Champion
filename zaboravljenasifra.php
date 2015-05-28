@@ -40,27 +40,25 @@
 		if (isset($_REQUEST['username'])) 
 		{
 			$username = htmlspecialchars($_REQUEST['username']);
-		   	
-		    $get_info 	= $veza->query("SELECT email FROM admin WHERE username = '{$username}' LIMIT 0, 1");
-		    $info 		= $get_info->fetch();
+	    $get_info = $veza->query("SELECT email FROM admin WHERE username = '{$username}' LIMIT 0, 1");
+	    $info = $get_info->fetch();
 
-		    $email 		= $info['email'];
-		    $new_pass	= substr(md5(time()), 0, 10);
+	    $to = $info['email'];
+	    $new_pass	= substr(md5(time()), 0, 10);
 
-		    $veza->query("UPDATE admin SET password = '{$new_pass}' WHERE username = '{$username}' LIMIT 0, 1");
+	    $veza->query("UPDATE admin SET password = '{$new_pass}' WHERE username = '{$username}' LIMIT 0, 1");
 
-		    $comment = "Uspješno ste promijenili password! Vaš novi password glasi: ".$new_pass;
-				ini_set("SMTP","webmail.etf.unsa.ba");
-				ini_set("smtp_port","25");
-				ini_set('sendmail_from','akiselica1@etf.unsa.ba');
-		    $to = $email;
-		    $naslov = "Promjena vaše šifre na Karate Klub Champion";
+	    $tekst = "Uspješno ste promijenili password! Vaš novi password glasi: ".$new_pass;
+			ini_set("SMTP","webmail.etf.unsa.ba");
+			ini_set("smtp_port","465");
+			ini_set('sendmail_from','akiselica1@etf.unsa.ba');
+	    $naslov = "Promjena vaše šifre na Karate Klub Champion";
 
-		    $header = "From: akiselica1@etf.unsa.ba\r\n"."Content-Type: text/html; charset=\"UTF-8\""."\r\n";
-    		$poruka = "Username: ".$username."\r\n".$comment;	
-    		$dodatno = "Reply-to: noreply@akiselica1.com";
-    		$poslanMail = mail($to, $naslov, $poruka, $dodatno);
-		    echo ($poslanMail == 1) ? "Zahvaljujemo vam sto ste nas kontaktirali." : "Došlo je do greške pri slanju maila.";
+	    $header = "From: akiselica1@etf.unsa.ba\r\n"."Content-Type: text/html; charset=\"UTF-8\""."\r\n";
+  		$poruka = "Username: ".$username."\r\n".$tekst;	
+  		$dodatno = "Reply-to: noreply@akiselica1.com";
+  		$poslanMail = mail($to, $naslov, $poruka, $dodatno);
+	    echo ($poslanMail == 1) ? "Zahvaljujemo vam sto ste nas kontaktirali." : "Došlo je do greške pri slanju maila.";
 		}
 	}
 ?>
