@@ -4,7 +4,11 @@ $naslov = $_REQUEST['naslov'];
 $slika = $_REQUEST['slika'];
 $opis = $_REQUEST['opis'];
 $detalji = $_REQUEST['detaljnije'];
-$datum = $_REQUEST['datum'];
+//$datum = $_REQUEST['datum'];
+$format = 'd.m.Y H:i:s'; //2015-05-21 13:33:49
+//$datum = trim($_REQUEST['datum']);
+$datum = date ($format, $_REQUEST['datum']);
+
 $autor = $_REQUEST['autor'];
 
 $novostiDiv ='<div class="intro">

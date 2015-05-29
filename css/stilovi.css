@@ -88,7 +88,7 @@ img{
 /*_____________________________________*/
 
 /*                      IZBORNI MENI I PODMENIJI (konfuzija>9000)                    */
-#pocetna, #korpa, #contact{
+#pocetna, #korpa, #contact, #admin{
     padding-right: 25px;
     margin-top: -4px;
     width: 24px;

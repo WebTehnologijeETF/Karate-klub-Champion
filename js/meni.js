@@ -466,3 +466,160 @@ function UcitajDetaljnije(datum, autor, naslov, slika, opis, detaljnije)
     ajax.open("GET", url, true);
     ajax.send();
 }
+
+
+function UcitajKomentare(novostID)
+{
+    var ajax;
+    if (window.XMLHttpRequest)
+    {
+        ajax = new XMLHttpRequest(); // FIREFOX
+    }
+    else if (window.ActiveXObject)
+    {
+        ajax = new ActiveXObject(); // IE
+    }
+    ajax.onreadystatechange = function()
+    {
+        if(ajax.readyState == 4 && ajax.status == 200)
+        {
+           document.getElementById("promijeni").innerHTML = ajax.responseText;
+        }
+        if (ajax.readyState == 4 && ajax.status == 404)
+        {
+           alert("Ne postoji stranica!");
+        }
+        if (ajax.readyState == 4 && ajax.status == 400)
+        {
+           alert("Neispravni podaci!");
+        }
+    }
+    var url= "komentari.php?novostID="+novostID;
+    ajax.open("GET", url, true);
+    ajax.send();
+}
+
+function ObrisiKomentar(komentarID)
+{
+    var ajax;
+    if (window.XMLHttpRequest)
+    {
+        ajax = new XMLHttpRequest(); // FIREFOX
+    }
+    else if (window.ActiveXObject)
+    {
+        ajax = new ActiveXObject(); // IE
+    }
+    ajax.onreadystatechange = function()
+    {
+        if(ajax.readyState == 4 && ajax.status == 200)
+        {
+           document.getElementById("promijeni").innerHTML = ajax.responseText;
+        }
+        if (ajax.readyState == 4 && ajax.status == 404)
+        {
+           alert("Ne postoji stranica!");
+        }
+        if (ajax.readyState == 4 && ajax.status == 400)
+        {
+           alert("Neispravni podaci!");
+        }
+    }
+    var url= "akcija.php?komentarID="+komentarID;
+    ajax.open("POST", url, true);
+    ajax.send();
+    console.log(ajax.responseText);
+}
+
+function ObrisiNovost(novostID)
+{
+    var ajax;
+    if (window.XMLHttpRequest)
+    {
+        ajax = new XMLHttpRequest(); // FIREFOX
+    }
+    else if (window.ActiveXObject)
+    {
+        ajax = new ActiveXObject(); // IE
+    }
+    ajax.onreadystatechange = function()
+    {
+        if(ajax.readyState == 4 && ajax.status == 200)
+        {
+           document.getElementById("promijeni").innerHTML = ajax.responseText;
+        }
+        if (ajax.readyState == 4 && ajax.status == 404)
+        {
+           alert("Ne postoji stranica!");
+        }
+        if (ajax.readyState == 4 && ajax.status == 400)
+        {
+           alert("Neispravni podaci!");
+        }
+    }
+    var url= "akcija.php?novostID="+novostID;
+    ajax.open("POST", url, true);
+    ajax.send();
+}
+
+function ObrisiKorisnika(korisnikID, flag)
+{
+    var ajax;
+    if (window.XMLHttpRequest)
+    {
+        ajax = new XMLHttpRequest(); // FIREFOX
+    }
+    else if (window.ActiveXObject)
+    {
+        ajax = new ActiveXObject(); // IE
+    }
+    ajax.onreadystatechange = function()
+    {
+        if(ajax.readyState == 4 && ajax.status == 200)
+        {
+           document.getElementById("promijeni").innerHTML = ajax.responseText;
+        }
+        if (ajax.readyState == 4 && ajax.status == 404)
+        {
+           alert("Ne postoji stranica!");
+        }
+        if (ajax.readyState == 4 && ajax.status == 400)
+        {
+           alert("Neispravni podaci!");
+        }
+    }
+    var url= "akcija.php?korisnikID="+korisnikID+"&flag="+flag;
+    ajax.open("POST", url, true);
+    ajax.send();
+}
+
+function UrediKorisnika(korisnikID2)
+{
+    var ajax;
+    if (window.XMLHttpRequest)
+    {
+        ajax = new XMLHttpRequest(); // FIREFOX
+    }
+    else if (window.ActiveXObject)
+    {
+        ajax = new ActiveXObject(); // IE
+    }
+    ajax.onreadystatechange = function()
+    {
+        if(ajax.readyState == 4 && ajax.status == 200)
+        {
+//           document.getElementById("promijeni").innerHTML = ajax.responseText;
+        }
+        if (ajax.readyState == 4 && ajax.status == 404)
+        {
+           alert("Ne postoji stranica!");
+        }
+        if (ajax.readyState == 4 && ajax.status == 400)
+        {
+           alert("Neispravni podaci!");
+        }
+    }
+    var url= "uredikorisnika.php?korisnikID2="+korisnikID2;
+    ajax.open("POST", url, true);
+    ajax.send();
+}
