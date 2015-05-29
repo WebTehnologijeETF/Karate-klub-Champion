@@ -20,11 +20,23 @@
 	    }
 	    if (!isset($_REQUEST['naslov']))
 	    {
-	        $_REQUEST['naslov'] = "";
+	        $_REQUEST['naslov'] = $holder['naslov'];
 	    }
 	    if (!isset($_REQUEST['autor']))
 	    {
-	        $_REQUEST['autor'] = "";
+	        $_REQUEST['autor'] = $holder['autor'];
+	    }
+	    if (!isset($_REQUEST['slika']))
+	    {
+	    	$_REQUEST['slika'] = $holder['slika'];
+	    }
+	    if (!isset($_REQUEST['tekst']))
+	    {
+	    	$_REQUEST['tekst'] = $holder['opis'];
+	    }
+	    if (!isset($_REQUEST['detaljnije']))
+	    {
+	    	$_REQUEST['detaljnije'] = $holder['detaljnije'];
 	    }
 	    if (isset($_REQUEST['naslov']))
 	    {
@@ -47,7 +59,7 @@
 	    print "<div><br><h4 style='margin-left:30px'>Unesi novost:</h4></div>";
 
 
-	    $komentarForma = '<div> <form method="POST" action="index.html" id="kforma">
+	    $komentarForma = '<form method="POST" action="index.html" id="kforma">
 	                          <div>
 	                              <strong class = "input"><small>Naslov: </small></strong><br>
 	                              <input type="text" class="input" name="naslov"';
@@ -57,10 +69,7 @@
 	                          <div>
 	                              <strong class = 'input'><small>Autor: </small></strong><br>
 	                              <input type='text' class='input' name='autor'";
-	    if(isset($_REQUEST['autor']) && $emailV == 0) 
-	    {
-	        $komentarForma = $komentarForma.' value="'.htmlspecialchars($holder['autor']).'"';
-	    }
+        $komentarForma = $komentarForma.' value="'.htmlspecialchars($holder['autor']).'"';
 	    $komentarForma = $komentarForma.'></div>';
 	    $komentarForma = $komentarForma."<div><br>
 	                                <strong class = 'input'><small>URL slike: </small></strong><br>
@@ -69,55 +78,54 @@
 	    $komentarForma = $komentarForma."></div><br>";
 	    $komentarForma = $komentarForma."
 	    						  <div>
-	                              <strong class = 'input'><small>Tekst:</small></strong><br>
-	                              <textarea class='input' name='tekst' rows ='6' cols='51'>";
+	                              	<strong class = 'input'><small>Tekst:</small></strong><br>
+	                              	<textarea class='input' name='tekst' rows ='6' cols='51'>";
 	    $komentarForma .= htmlspecialchars($holder['opis']);
 	    $komentarForma .="</textarea></div><br>
 	                              <div>
-	                              <strong class = 'input'><small>Detaljnije:</small></strong><br>
- 	                              <textarea class='input' name='detaljnije' rows ='5' cols='51'>";
+	                              	<strong class = 'input'><small>Detaljnije:</small></strong><br>
+ 	                              	<textarea class='input' name='detaljnije' rows ='5' cols='51'>";
 	    $komentarForma .= htmlspecialchars($holder['detaljnije']);
-	    $komentarForma .= "</textarea></div><br>";
+	    $komentarForma .= "</textarea>
+	    						  </div><br>";
 	    $komentarForma = $komentarForma."<input type='submit' class='input' value='Unesi novost'>
-	                              </form></div>";
+	                              </form>";
 	    echo $komentarForma;
-	    echo $emailV." ".$nazivV;
-    }
+	}
 ?>
 
 
 <?php
-if($emailV == 0 && $nazivV == 0 && isset($_REQUEST['tekst']) && isset($_REQUEST['slika']) && isset($_REQUEST['detaljnije']) && isset($_REQUEST['autor']) && isset($_REQUEST['naslov']))
-	    {
-	    	$id = htmlspecialchars($_REQUEST['nID']);	    	
-	        $autorU = htmlspecialchars($_REQUEST['autor']);
-	        $tekstU = htmlspecialchars($_REQUEST['tekst']);
-	        $mailU = htmlspecialchars($_REQUEST['naslov']);
-	        $slikaU = htmlspecialchars($_REQUEST['slika']);
-	        $detaljU = htmlspecialchars($_REQUEST['detaljnije']);
-	        if ($autorU != "")
-	        {
-	        	echo "MRŠŠ";
-	        	$upis = $veza->query("UPDATE novost set autor = '{$autorU}' where id = {$id}");
-	        }
-	        if ($tekstU != "")
-	        {
-	        	$upis = $veza->query("UPDATE novost set opis = '{$tekstU}' where id = {$id}");
-	        }
-	        if ($slikaU != "")
-	        {
-	        	$upis = $veza->query("UPDATE novost set slika = '{$slikaU}' where id = {$id}");
-	        }
-	        if ($mailU != "")
-	        {
-	        	$upis = $veza->query("UPDATE novost set naslov = '{$mailU}' where id = {$id}");
-	        }
-	        if ($detaljU != "")
-	        {
-	        	$upis = $veza->query("UPDATE novost set autor = '{$detaljU}' where id = {$id}");
-	        }
-	    }
-
+	if($emailV == 0 && $nazivV == 0 && isset($_REQUEST['tekst']) && isset($_REQUEST['slika']) && isset($_REQUEST['detaljnije']) && isset($_REQUEST['autor']) && isset($_REQUEST['naslov']))
+    {
+   	    echo $emailV." ".$nazivV;
+    	$id = htmlspecialchars($_REQUEST['nID']);	    	
+        $autorU = htmlspecialchars($_REQUEST['autor']);
+        $tekstU = htmlspecialchars($_REQUEST['tekst']);
+        $mailU = htmlspecialchars($_REQUEST['naslov']);
+        $slikaU = htmlspecialchars($_REQUEST['slika']);
+        $detaljU = htmlspecialchars($_REQUEST['detaljnije']);
+        if ($autorU != "")
+        {
+        	$upis = $veza->query("UPDATE novost set autor = '{$autorU}' where id = {$id}");
+        }
+        if ($tekstU != "")
+        {
+        	$upis = $veza->query("UPDATE novost set opis = '{$tekstU}' where id = {$id}");
+        }
+        if ($slikaU != "")
+        {
+        	$upis = $veza->query("UPDATE novost set slika = '{$slikaU}' where id = {$id}");
+        }
+        if ($mailU != "")
+        {
+        	$upis = $veza->query("UPDATE novost set naslov = '{$mailU}' where id = {$id}");
+        }
+        if ($detaljU != "")
+        {
+        	$upis = $veza->query("UPDATE novost set autor = '{$detaljU}' where id = {$id}");
+        }
+    }
 ?>
 
 			<div id="footer">
