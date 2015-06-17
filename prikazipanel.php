@@ -1,7 +1,8 @@
 <?php
 	include 'zaglavlje.html';
 ?>
-
+<div id ="promijeni">
+    <!-- DIO HTML-a KOJI SE MIJENJA PO LOADU STRANICE-->
 <?php
 	session_start();
 	if(isset($_SESSION['username']))
@@ -12,6 +13,7 @@
 		include 'privilegije.php';
 	}
 ?>
+</div>
 
 			<div id="footer">
 				<img alt="savezi" id="futer1" src="slike/ClanSaveza.jpg">

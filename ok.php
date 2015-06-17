@@ -28,21 +28,13 @@
 		<br><br>
 		<strong>Predmet poruke: (*)</strong><br>
 		<input class="input" id="predmet" name="predmet" type="text" maxlength="50" value="<?php if (isset($_REQUEST['predmet'])) {print htmlspecialchars($_REQUEST['predmet']);} ?>">
+<!--		<div class="greskaj"><strong>Današnji datum:</strong></div> -->
+		<input class="input" type="date" name ="datum" value="2015-04-16" min="2015-04-16" max="2015-12-31" style="visibility: hidden">
 		<br><br>
-		<div class="greskaj"><strong>Današnji datum:</strong></div>
-		<input class="input" type="date" name ="datum" value="2015-04-16" min="2015-04-16" max="2015-12-31">
-		<br><br><br>
-        <div class="greskaj"><strong>Mjesto:</strong></div>
-        <input class ="input" type="text" maxlength="20" id="mjesto"><p id="uslov"></p>
-        <br>
-        <div class="greskaj"><strong>Postanski broj:</strong></div>
-        <input class ="input" type="text" maxlength="20" id="posta"><p id="uslov"></p>
-        <br><br>
 			<div id="greska"><?php print $poruka?></div>
 		<div class="greskaj"><strong>Tekst poruke:</strong></div>
 		<textarea class="input" id="area" name="area" rows ="10" cols="51"><?php if (isset($_REQUEST['area'])) {print htmlspecialchars($_REQUEST['area']);} ?></textarea>
 		<br><br>
 		<input class="input" id="dugme" type="submit" value="Posalji"> <!--onclick="return validacijaKontaktForme()"> -->
 	</form>
-	<?php include "mailMe.php"?>
 </div>
